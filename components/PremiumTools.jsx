@@ -1,25 +1,12 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 const tools = [
-  {
-    name: "Framer",
-    desc: "Website Builder",
-    img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/framer.svg",
-  },
   {
     name: "Figma",
     desc: "Design Tool",
     img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/figma.svg",
-  },
-  {
-    name: "Lemon Squeezy",
-    desc: "Payments Provider",
-    img: "https://lemon-squeezy.com/icons/icon-512x512.png",
-  },
-  {
-    name: "ChatGPT",
-    desc: "AI Assistant",
-    img: "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
   },
   {
     name: "Notion",
@@ -51,23 +38,68 @@ const tools = [
     desc: "Deployment Platform",
     img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/vercel.svg",
   },
+  {
+    name: "MongoDB",
+    desc: "Database",
+    img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mongodb.svg",
+  },
+  {
+    name: "Express.js",
+    desc: "Backend Framework",
+    img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/express.svg",
+  },
+  {
+    name: "Node.js",
+    desc: "Backend Runtime",
+    img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/nodedotjs.svg",
+  },
+  {
+    name: "Solidity",
+    desc: "Smart Contract Language",
+    img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/solidity.svg",
+  },
+  {
+    name: "JavaScript",
+    desc: "Programming Language",
+    img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/javascript.svg",
+  },
 ];
 
 export default function PremiumTools() {
   return (
-    <section id="tools" className="bg-neutral-950 text-white px-6 py-16 md:px-12 lg:px-24">
+    <section className="bg-neutral-950 text-white px-6 py-16 md:px-12 lg:px-24">
       <div className="max-w-4xl mx-auto">
+
         {/* Heading */}
-        <h2 className="text-5xl md:text-6xl font-extrabold">
-          PREMIUM <br/><span className="text-neutral-600">TOOLS</span>
-        </h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="text-5xl md:text-6xl font-extrabold"
+        >
+          PREMIUM <br />
+          <span className="text-neutral-600">TOOLS</span>
+        </motion.h2>
 
         {/* Tools Grid */}
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.1 } },
+          }}
+          className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6"
+        >
           {tools.map((tool, index) => (
-            <div
+            <motion.div
               key={index}
-              className="flex items-center gap-4"
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.4 }}
+              className="flex items-center gap-4 group cursor-pointer"
             >
               <div className="bg-white w-12 h-12 flex items-center justify-center rounded-md shadow-md">
                 <img
@@ -76,13 +108,14 @@ export default function PremiumTools() {
                   className="w-6 h-6 object-contain"
                 />
               </div>
-              <div>
+              <div className="transition-colors duration-300 group-hover:text-orange-500">
                 <h3 className="font-semibold">{tool.name}</h3>
                 <p className="text-neutral-400 text-sm">{tool.desc}</p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+
+        </motion.div>
       </div>
     </section>
   );

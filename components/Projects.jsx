@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
@@ -8,69 +9,96 @@ const projects = [
     title: "Stole UI",
     description:
       "An online platform to get free UI components and design inspiration.",
-    image: "/project1.png", // place in public/projects/
+    image: "/project1.png",
     link: "#",
     tag: "Platform",
   },
   {
-    title: "NajmAI",
-    description: "SaaS Framer Template",
+    title: "Doc Sansar",
+    description: "Access study materials, assignments, Q&A, educational tools",
     image: "/project2.png",
     link: "#",
-    tag: "Template",
+    tag: "Platform",
   },
   {
-    title: "Nashra",
-    description: "SaaS Framer Template",
+    title: "Stole Folio",
+    description: "A free online platform to create stunning, professional portfolios in minutes.",
     image: "/project3.png",
     link: "#",
-    tag: "Template",
+    tag: "Platform",
   },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="bg-neutral-950 text-white px-6 py-16 md:px-12 lg:px-24">
+    <section className="bg-neutral-950 text-white px-6 py-16 md:px-12 lg:px-24">
       <div className="max-w-4xl mx-auto">
         {/* Heading */}
-        <h2 className="text-4xl md:text-5xl font-extrabold">
-          RECENT <br/><span className="text-neutral-600">PROJECTS</span>
-        </h2>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-4xl md:text-5xl font-extrabold"
+        >
+          RECENT <br />
+          <span className="text-neutral-600">PROJECTS</span>
+        </motion.h2>
 
         {/* Projects List */}
-        <div className="mt-10 flex flex-col gap-8">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.15 } },
+          }}
+          className="mt-10 flex flex-col gap-6"
+        >
           {projects.map((project, index) => (
-            <a
+            <motion.a
               key={index}
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex gap-4 group items-start"
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="flex gap-6 group items-center bg-neutral-900 p-4 rounded-xl hover:bg-neutral-800 transition-colors"
             >
               {/* Project Image */}
-              <div className="w-32 h-20 flex-shrink-0 rounded-md overflow-hidden bg-neutral-800">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+                className="w-40 h-28 flex-shrink-0 rounded-lg overflow-hidden bg-neutral-800 shadow-lg"
+              >
                 <Image
                   src={project.image}
                   alt={project.title}
-                  width={128}
-                  height={80}
-                  className="object-cover w-full h-full group-hover:scale-105 transition-transform"
+                  width={160}
+                  height={112}
+                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
                 />
-              </div>
+              </motion.div>
 
               {/* Project Info */}
               <div className="flex-1">
-                <h3 className="font-semibold text-lg">{project.title}</h3>
+                <h3 className="font-semibold text-lg group-hover:text-orange-500 transition-colors">
+                  {project.title}
+                </h3>
                 <p className="text-neutral-400 text-sm mt-1">
                   {project.description}
                 </p>
               </div>
 
               {/* Icon */}
-              <ArrowUpRight className="w-4 h-4 mt-1 text-neutral-400 group-hover:text-orange-500 transition" />
-            </a>
+              <ArrowUpRight className="w-5 h-5 text-neutral-400 group-hover:text-orange-500 transition" />
+            </motion.a>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

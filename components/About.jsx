@@ -2,19 +2,34 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight, Layers, SquareStack } from "lucide-react";
+import { useTypewriter, Cursor } from "react-simple-typewriter"; // new import
+import Link from "next/link";
 
-export default function DeveloperSection() {
+export default function AboutSection() {
+  const [text] = useTypewriter({
+    words: [
+      "Web Developer",
+      "MERN Stack Developer",
+      "Next JS Developer",
+      "Solidity Developer",
+      "Smart Contract Developer"
+    ],
+    loop: true,
+    delaySpeed: 2000,
+  });
+
   return (
-    <section className="bg-neutral-950 text-white px-6 py-16 md:px-12 lg:px-24">
+    <section className="bg-neutral-950 text-white px-6 py-16 md:px-12 lg:px-24 ">
       <div className="max-w-4xl mx-auto">
-        {/* Heading */}
+        {/* Heading with Typewriter */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-5xl md:text-6xl font-extrabold leading-tight"
         >
-          WEB <br /> DEVELOPER
+          {text}
+          <Cursor cursorColor="#f97316" />
         </motion.h1>
 
         {/* Subheading */}
@@ -55,7 +70,7 @@ export default function DeveloperSection() {
           </div>
         </motion.div>
 
-        {/* Cards */}
+        {/* Cards with Links */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -63,11 +78,22 @@ export default function DeveloperSection() {
           className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10"
         >
           {/* Card 1 - Orange */}
-          <div className="relative bg-orange-500 rounded-xl p-6 overflow-hidden cursor-pointer group">
-            {/* Pattern */}
+          <Link
+            href="https://www.framer.com/motion/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative bg-orange-500 rounded-xl p-6 overflow-hidden cursor-pointer group"
+          >
             <div className="absolute inset-0 opacity-20">
               <svg width="100%" height="100%">
-                <circle cx="150" cy="50" r="200" fill="none" stroke="white" strokeWidth="50" />
+                <circle
+                  cx="150"
+                  cy="50"
+                  r="200"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="50"
+                />
               </svg>
             </div>
             <Layers className="w-6 h-6 mb-4 relative z-10" />
@@ -77,10 +103,13 @@ export default function DeveloperSection() {
             <div className="mt-4 flex justify-end relative z-10">
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </div>
-          </div>
+          </Link>
 
           {/* Card 2 - Green */}
-          <div
+          <Link
+            href="https://www.figma.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="relative bg-lime-400 text-black rounded-xl p-6 overflow-hidden cursor-pointer group"
             style={{
               backgroundImage:
@@ -94,7 +123,7 @@ export default function DeveloperSection() {
             <div className="mt-4 flex justify-end relative z-10">
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </div>
-          </div>
+          </Link>
         </motion.div>
       </div>
     </section>
