@@ -9,34 +9,27 @@ const posts = [
     description:
       "Exploring architecture patterns, database structuring, and UI/UX decisions that help build scalable full-stack apps using MongoDB, Express, React, and Node.js.",
     date: "Aug 10, 2025",
-    readTime: "8 min read",
-    href: "#",
   },
   {
     title: "Next.js + Tailwind: Building High-Performance UIs",
     description:
       "A guide to crafting sleek, responsive, and fast web applications by combining Next.js's SSR power with Tailwind CSS's utility-first design approach.",
     date: "Jul 25, 2025",
-    readTime: "7 min read",
-    href: "#",
   },
   {
     title: "From Figma to Code: A Developer’s Perspective",
     description:
       "Translating modern UI/UX designs into pixel-perfect, responsive, and maintainable code without losing design intent.",
     date: "Jun 14, 2025",
-    readTime: "6 min read",
-    href: "#",
   },
   {
     title: "Smart Contracts & Web3 Integration with Solidity",
     description:
       "Best practices for writing secure smart contracts and integrating blockchain functionalities into modern web apps.",
     date: "May 5, 2025",
-    readTime: "9 min read",
-    href: "#",
   },
 ];
+
 
 export default function DesignThoughts() {
   return (
@@ -78,15 +71,9 @@ export default function DesignThoughts() {
             >
               <div className="flex items-start justify-between gap-6">
                 <div className="flex-1">
-                  <h3 className="text-lg font-bold flex items-center gap-2">
-                    <a
-                      href={post.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-orange-500 transition"
-                    >
+                  <h3 className="text-lg font-bold flex items-center gap-2 hover:text-orange-500 transition">
+                    
                       {post.title}
-                    </a>
                     <ArrowUpRight className="w-4 h-4 text-orange-500" />
                   </h3>
                   <p className="text-neutral-400 text-sm mt-2">
@@ -94,9 +81,7 @@ export default function DesignThoughts() {
                   </p>
                   <p className="text-neutral-500 text-xs mt-3">{post.date}</p>
                 </div>
-                <span className="text-neutral-500 text-xs whitespace-nowrap">
-                  {post.readTime}
-                </span>
+               
               </div>
             </motion.div>
           ))}

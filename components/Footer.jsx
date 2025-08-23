@@ -13,16 +13,16 @@ export default function Footer() {
         
         {/* Social Icons */}
         <div className="flex gap-5">
-          <Link href="#" className="hover:text-white transition">
+          <Link href="https://github.com/divyanshu-go" className="hover:text-white transition">
             <Github className="w-5 h-5" />
           </Link>
-          <Link href="#" className="hover:text-white transition">
+          <Link href="https://x.com/divyanshu_go" className="hover:text-white transition">
             <Twitter className="w-5 h-5" />
           </Link>
-          <Link href="#" className="hover:text-white transition">
+          <Link href="https://www.linkedin.com/in/divyanshu-sharma-go" className="hover:text-white transition">
             <Linkedin className="w-5 h-5" />
           </Link>
-          <Link href="mailto:your@email.com" className="hover:text-white transition">
+          <Link href="mailto:divyanshu9304628@gmail.com" className="hover:text-white transition">
             <Mail className="w-5 h-5" />
           </Link>
         </div>

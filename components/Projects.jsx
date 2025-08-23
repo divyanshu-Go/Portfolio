@@ -10,21 +10,21 @@ const projects = [
     description:
       "An online platform to get free UI components and design inspiration.",
     image: "/project1.png",
-    link: "#",
+    link: "https://stole-ui.vercel.app/",
     tag: "Platform",
   },
   {
     title: "Doc Sansar",
     description: "Access study materials, assignments, Q&A, educational tools",
     image: "/project2.png",
-    link: "#",
+    link: "https://www.docsansar.com/",
     tag: "Platform",
   },
   {
     title: "Stole Folio",
     description: "A free online platform to create stunning, professional portfolios in minutes.",
     image: "/project3.png",
-    link: "#",
+    link: "https://stole-folio.vercel.app/",
     tag: "Platform",
   },
 ];

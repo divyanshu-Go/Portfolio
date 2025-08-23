@@ -9,9 +9,9 @@ const tools = [
     img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/figma.svg",
   },
   {
-    name: "Notion",
-    desc: "Productivity Tool",
-    img: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
+    name: "JavaScript",
+    desc: "Programming Language",
+    img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/javascript.svg",
   },
   {
     name: "Next.js",
@@ -59,10 +59,11 @@ const tools = [
     img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/solidity.svg",
   },
   {
-    name: "JavaScript",
-    desc: "Programming Language",
-    img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/javascript.svg",
-  },
+    name: "Notion",
+    desc: "Productivity Tool",
+    img: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
+  }
+  ,
 ];
 
 export default function PremiumTools() {
@@ -99,7 +100,7 @@ export default function PremiumTools() {
                 visible: { opacity: 1, y: 0 },
               }}
               transition={{ duration: 0.4 }}
-              className="flex items-center gap-4 group cursor-pointer"
+              className="flex items-center gap-4 group "
             >
               <div className="bg-white w-12 h-12 flex items-center justify-center rounded-md shadow-md">
                 <img

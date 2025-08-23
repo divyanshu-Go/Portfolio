@@ -16,7 +16,13 @@ const qualifications = [
     degree: "Diploma in Computer Science & Engineering",
     institution: "Government Polytechnic Gulzarbagh, Patna",
     date: "2021 – 2024",
-    link: "#",
+    link: "https://www.gpp7.org.in/",
+  },
+  {
+    degree: "Matriculation",
+    institution: "Prakritik Public School, Patna",
+    date: "2019 – 2021",
+    link: "https://www.google.com/search?sca_esv=2df61ded53f7a9a5&sxsrf=AE3TifMgA8gtDf_kitkHFgkjE2LX7SmLYQ:1755963035294&q=prakritik+school+naubatpur&source=lnms&fbs=AIIjpHzszoRmzeEhd8K7Oddy3YY6sVKInfeLtYuL70cZRC9XhujYccG3xDFd_cyLVTC48LrwPjjnsi_vy_enm6IHGcZCylAF8bIR_5ypOEA4oOMMushZlKBG9L4vIYvlWOszS-XCRD0jkx-t5-d6Q1R5OvvbSSFImQ4FR9EjqEPX_7_D8dLSUk5N4zJF466KpU1-0Lxi_iAvd2UvjVUAPLaFlaYc2tKks_nF4UsdsVJV_0zJ6EkYoVA&sa=X&ved=2ahUKEwjVmNSHoKGPAxXtS3ADHWAwGIwQ0pQJegQICxAB&biw=681&bih=680&dpr=1",
   },
 ];
 

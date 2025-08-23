@@ -13,3 +13,16 @@ body {
 .b{
   @apply border border-blue-600
 }
+
+
+body {
+  cursor: none;
+}
+
+input, textarea {
+  cursor: none !important; /* keep typing caret */
+}
+
+button, a {
+  cursor: none !important; /* no default hand cursor */
+}

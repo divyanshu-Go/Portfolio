@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { Linkedin, Twitter, Github, Mail, Download } from "lucide-react";
 
-export default function Profile() {
+export default function ProfileComponent() {
     return (
-        <div className="w-full flex flex-col gap-4 overflow-hidden bg-white rounded-2xl p-8 text-center relative shadow-lg">
+        <div id="profile-card" className="w-full flex flex-col gap-4 overflow-hidden bg-white rounded-2xl p-8 text-center relative shadow-lg">
             {/* Decorative dashed curve */}
             <div className="absolute -rotate-[100deg] -top-15 left-8 w-30 h-30 border-4 border-dashed border-orange-500 rounded-full border-b-0 border-r-0"></div>
 
