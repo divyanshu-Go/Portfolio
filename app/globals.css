@@ -26,3 +26,17 @@ input, textarea {
 button, a {
   cursor: none !important; /* no default hand cursor */
 }
+
+/* In your global.css */
+.wave-top {
+  clip-path: polygon(
+    0% 0%, 
+    0% 20%, 
+    10% 15%, 20% 25%, 30% 15%, 40% 25%,
+    50% 15%, 60% 25%, 70% 15%, 80% 25%,
+    90% 15%, 100% 20%, 
+    100% 0%
+  );
+}
+
+
