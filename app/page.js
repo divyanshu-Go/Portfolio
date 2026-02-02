@@ -1,3 +1,5 @@
+// app/page.js
+
 import RevealOnScroll from "@/components/RevealOnScroll";
 import About from "@/components/About";
 import ContactForm from "@/components/ContactForm";
@@ -8,6 +10,8 @@ import Navbar from "@/components/Navbar";
 import PremiumTools from "@/components/PremiumTools";
 import Profile from "@/components/Profile";
 import Projects from "@/components/Projects";
+
+export const dynamic = "force-static";
 
 const PortfolioPage = () => {
   return (

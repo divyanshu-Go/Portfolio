@@ -1,6 +1,6 @@
+// app/layout.js
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import CustomCursor from "@/components/CustomCursor";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,9 +17,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`font-[Poppins] relative min-h-screen flex flex-col cursor-none overflow-x-hidden`}
+        className={`font-[Poppins] relative min-h-screen flex flex-col overflow-x-hidden`}
       >
-        <CustomCursor />
+        {/* <CustomCursor /> */}
         {children}
       </body>
     </html>

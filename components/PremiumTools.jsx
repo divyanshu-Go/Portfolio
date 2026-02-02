@@ -1,6 +1,9 @@
+// components/PremiumTools.jsx
+
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const tools = [
   {
@@ -102,11 +105,13 @@ export default function PremiumTools() {
               transition={{ duration: 0.4 }}
               className="flex items-center gap-4 group "
             >
-              <div className="bg-white w-12 h-12 flex items-center justify-center rounded-md shadow-md">
-                <img
+              <div className="bg-white w-12 h-12 b flex items-center justify-center rounded-md">
+                <Image
                   src={tool.img}
                   alt={tool.name}
-                  className="w-6 h-6 object-contain"
+                  className="object-contain w-6 h-6"
+                  width={24}
+                  height={24}
                 />
               </div>
               <div className="transition-colors duration-300 group-hover:text-orange-500">

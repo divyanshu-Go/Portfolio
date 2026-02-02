@@ -1,4 +1,4 @@
-"use client";
+// components/Footer.jsx
 
 import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 import Link from "next/link";
@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
         
         {/* Copyright */}
-        <p className="text-sm">&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
+        <p className="text-sm">&copy; {new Date().getFullYear()} Divyanshu Sharma. All rights reserved.</p>
         
         {/* Social Icons */}
         <div className="flex gap-5">

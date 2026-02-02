@@ -1,3 +1,4 @@
+// components/RevealOnScroll.jsx
 "use client";
 
 import { motion, useInView } from "framer-motion";
@@ -12,7 +13,7 @@ export default function RevealOnScroll({ children, delay = 0, className = "" }) 
       ref={ref}
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay, ease: "easeOut" }}
+      transition={{ duration: 0.5, delay, ease: "easeOut" }}
       className={className}
     >
       {children}

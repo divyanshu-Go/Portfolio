@@ -15,10 +15,6 @@ body {
 }
 
 
-body {
-  cursor: none;
-}
-
 input, textarea {
   cursor: none !important; /* keep typing caret */
 }
