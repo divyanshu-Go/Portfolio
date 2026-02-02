@@ -1,5 +1,4 @@
-"use client";
-
+// components/Profile.jsx
 import Image from "next/image";
 import Link from "next/link";
 import { Linkedin, Twitter, Github, Mail, Download } from "lucide-react";

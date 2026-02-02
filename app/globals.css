@@ -15,13 +15,6 @@ body {
 }
 
 
-input, textarea {
-  cursor: none !important; /* keep typing caret */
-}
-
-button, a {
-  cursor: none !important; /* no default hand cursor */
-}
 
 /* In your global.css */
 .wave-top {

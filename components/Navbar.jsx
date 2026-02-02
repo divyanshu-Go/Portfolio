@@ -33,7 +33,7 @@ export default function Navbar() {
         <button
           key={item.name}
           onClick={() => handleScroll(item.id)}
-          className="relative group text-neutral-300 hover:text-orange-500 transition"
+          className="relative group text-neutral-300 hover:text-orange-500 transition cursor-pointer"
         >
           <item.icon className="w-5 h-5" />
           {/* Tooltip */}

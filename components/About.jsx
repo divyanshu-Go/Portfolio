@@ -1,56 +1,34 @@
 // components/About.jsx
-"use client";
 
-import { motion } from "framer-motion";
-import { ArrowRight, Layers, SquareStack } from "lucide-react";
-import { useTypewriter, Cursor } from "react-simple-typewriter"; // new import
 import Link from "next/link";
+import { ArrowRight, Layers, SquareStack } from "lucide-react";
+import AboutStatic from "./AboutStatic";
+import AboutTypewriter from "./AboutTypewriter";
 
-export default function AboutSection() {
-  const [text] = useTypewriter({
-    words: [
-      "Web Developer",
-      "MERN Stack Developer",
-      "Next JS Developer",
-      "Solidity Developer",
-      "Smart Contract Developer"
-    ],
-    loop: true,
-    delaySpeed: 2000,
-  });
-
+export default function About() {
   return (
-    <section className="bg-neutral-950 text-white px-6 py-16 md:px-12 lg:px-24 ">
+    <section className="bg-neutral-950 text-white px-6 py-16 md:px-12 lg:px-24">
       <div className="max-w-4xl mx-auto">
-        {/* Heading with Typewriter */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-5xl md:text-6xl font-extrabold leading-tight"
-        >
-          {text}
-          <Cursor cursorColor="#f97316" />
-        </motion.h1>
+
+        {/* Heading (instant render + enhancement) */}
+        <div className="">
+          {/* Static text for instant paint */}
+          {/* <AboutStatic /> */}
+
+          {/* Typewriter overlays after hydration */}
+          <span className="relative inset-0">
+            <AboutTypewriter />
+          </span>
+        </div>
 
         {/* Subheading */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-neutral-400 mt-4 max-w-lg"
-        >
+        <p className="text-neutral-400 mt-4 max-w-lg">
           Passionate full-stack developer who loves turning ideas into impactful,
           user-friendly products.
-        </motion.p>
+        </p>
 
         {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex gap-8 mt-10"
-        >
+        <div className="flex gap-8 mt-10">
           <div>
             <p className="text-3xl font-bold">+2</p>
             <p className="text-xs text-neutral-400 uppercase">
@@ -69,63 +47,40 @@ export default function AboutSection() {
               Clients <br /> Project
             </p>
           </div>
-        </motion.div>
+        </div>
 
-        {/* Cards with Links */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10"
-        >
-          {/* Card 1 - Orange */}
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
           <Link
             href="https://www.framer.com/motion/"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative bg-orange-500 rounded-xl p-6 overflow-hidden cursor-pointer group"
+            className="relative bg-orange-500 rounded-xl p-6 overflow-hidden group"
           >
-            <div className="absolute inset-0 opacity-20">
-              <svg width="100%" height="100%">
-                <circle
-                  cx="150"
-                  cy="50"
-                  r="200"
-                  fill="none"
-                  stroke="white"
-                  strokeWidth="50"
-                />
-              </svg>
-            </div>
-            <Layers className="w-6 h-6 mb-4 relative z-10" />
-            <p className="font-bold uppercase text-sm leading-tight relative z-10">
+            <Layers className="w-6 h-6 mb-4" />
+            <p className="font-bold uppercase text-sm leading-tight">
               Dynamic Animation, <br /> Motion Design
             </p>
-            <div className="mt-4 flex justify-end relative z-10">
+            <div className="mt-4 flex justify-end">
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
 
-          {/* Card 2 - Green */}
           <Link
             href="https://www.figma.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="relative bg-lime-400 text-black rounded-xl p-6 overflow-hidden cursor-pointer group"
-            style={{
-              backgroundImage:
-                "repeating-linear-gradient(135deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 2px, transparent 2px, transparent 12px)",
-            }}
+            className="relative bg-lime-400 text-black rounded-xl p-6 overflow-hidden group"
           >
-            <SquareStack className="w-6 h-6 mb-4 relative z-10" />
-            <p className="font-bold uppercase text-sm leading-tight relative z-10">
+            <SquareStack className="w-6 h-6 mb-4" />
+            <p className="font-bold uppercase text-sm leading-tight">
               Framer, Figma, <br /> Wordpress, ReactJS
             </p>
-            <div className="mt-4 flex justify-end relative z-10">
+            <div className="mt-4 flex justify-end">
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -1,7 +1,5 @@
 // components/DesignThoughts.jsx
-"use client";
 
-import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
 const posts = [
@@ -31,62 +29,41 @@ const posts = [
   },
 ];
 
-
 export default function DesignThoughts() {
   return (
     <section
       id="thoughts"
-      className="bg-neutral-950 text-white px-6 py-16 md:px-12 lg:px-24 "
+      className="bg-neutral-950 text-white px-6 py-16 md:px-12 lg:px-24"
     >
       <div className="max-w-4xl mx-auto">
         {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-5xl md:text-6xl font-extrabold leading-tight"
-        >
+        <h2 className="text-5xl md:text-6xl font-extrabold leading-tight">
           DESIGN <br />
           <span className="text-neutral-600">THOUGHTS</span>
-        </motion.h2>
+        </h2>
 
-        {/* Posts List */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.15 } },
-          }}
-          className="mt-10 space-y-10"
-        >
+        {/* Posts */}
+        <div className="mt-10 space-y-10">
           {posts.map((post, index) => (
-            <motion.div
+            <div
               key={index}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.4 }}
               className="border-b border-neutral-800 pb-8 last:border-b-0"
             >
-              <div className="flex items-start justify-between gap-6">
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold flex items-center gap-2 hover:text-orange-500 transition">
-                    
-                      {post.title}
-                    <ArrowUpRight className="w-4 h-4 text-orange-500" />
-                  </h3>
-                  <p className="text-neutral-400 text-sm mt-2">
-                    {post.description}
-                  </p>
-                  <p className="text-neutral-500 text-xs mt-3">{post.date}</p>
-                </div>
-               
-              </div>
-            </motion.div>
+              <h3 className="text-lg font-bold flex items-center gap-2 hover:text-orange-500 transition">
+                {post.title}
+                <ArrowUpRight className="w-4 h-4 text-orange-500" />
+              </h3>
+
+              <p className="text-neutral-400 text-sm mt-2">
+                {post.description}
+              </p>
+
+              <p className="text-neutral-500 text-xs mt-3">
+                {post.date}
+              </p>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

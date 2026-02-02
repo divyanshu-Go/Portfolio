@@ -1,8 +1,5 @@
 // components/PremiumTools.jsx
 
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 const tools = [
@@ -73,55 +70,35 @@ export default function PremiumTools() {
   return (
     <section className="bg-neutral-950 text-white px-6 py-16 md:px-12 lg:px-24">
       <div className="max-w-4xl mx-auto">
-
         {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-5xl md:text-6xl font-extrabold"
-        >
+        <h2 className="text-5xl md:text-6xl font-extrabold">
           PREMIUM <br />
           <span className="text-neutral-600">TOOLS</span>
-        </motion.h2>
+        </h2>
 
         {/* Tools Grid */}
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: {},
-            visible: { transition: { staggerChildren: 0.1 } },
-          }}
-          className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6"
-        >
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
           {tools.map((tool, index) => (
-            <motion.div
+            <div
               key={index}
-              variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-              }}
-              transition={{ duration: 0.4 }}
-              className="flex items-center gap-4 group "
+              className="flex items-center gap-4 group"
             >
-              <div className="bg-white w-12 h-12 b flex items-center justify-center rounded-md">
+              <div className="bg-white w-12 h-12 flex items-center justify-center rounded-md shadow-md">
                 <Image
                   src={tool.img}
                   alt={tool.name}
-                  className="object-contain w-6 h-6"
                   width={24}
                   height={24}
                 />
               </div>
+
               <div className="transition-colors duration-300 group-hover:text-orange-500">
                 <h3 className="font-semibold">{tool.name}</h3>
                 <p className="text-neutral-400 text-sm">{tool.desc}</p>
               </div>
-            </motion.div>
+            </div>
           ))}
-
-        </motion.div>
+        </div>
       </div>
     </section>
   );
