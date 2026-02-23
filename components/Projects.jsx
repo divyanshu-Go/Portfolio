@@ -16,7 +16,7 @@ const categories = [
         description:
           "A freelance client project — a professional portfolio platform for an interior design studio.",
         image: "/project8.png",
-        link: "https://stole-folio.vercel.app/",
+        link: "https://github.com/divyanshu-Go/amrita_interiordesign",
       },
     ],
   },
