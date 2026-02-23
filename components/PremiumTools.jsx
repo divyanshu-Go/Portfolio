@@ -4,9 +4,9 @@ import Image from "next/image";
 
 const tools = [
   {
-    name: "Figma",
-    desc: "Design Tool",
-    img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/figma.svg",
+    name: "Next.js",
+    desc: "React Framework",
+    img: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg",
   },
   {
     name: "JavaScript",
@@ -14,19 +14,19 @@ const tools = [
     img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/javascript.svg",
   },
   {
-    name: "Next.js",
-    desc: "React Framework",
-    img: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg",
-  },
-  {
     name: "Tailwind CSS",
     desc: "CSS Framework",
     img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tailwindcss.svg",
   },
   {
-    name: "Visual Studio Code",
-    desc: "Code Editor",
-    img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/visualstudiocode.svg",
+    name: "Figma",
+    desc: "Design Tool",
+    img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/figma.svg",
+  },
+  {
+    name: "Vite",
+    desc: "Build Tool",
+    img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/vite.svg",
   },
   {
     name: "GitHub",
@@ -54,21 +54,40 @@ const tools = [
     img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/nodedotjs.svg",
   },
   {
+    name: "Postman",
+    desc: "API Testing Tool",
+    img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/postman.svg",
+  },
+  {
+    name: "Redux",
+    desc: "State Management Library",
+    img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/redux.svg",
+  },
+  {
     name: "Solidity",
     desc: "Smart Contract Language",
     img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/solidity.svg",
   },
   {
-    name: "Notion",
-    desc: "Productivity Tool",
-    img: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png",
-  }
-  ,
+    name: "Ethereum",
+    desc: "Blockchain Platform",
+    img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/ethereum.svg",
+  },
+  {
+    name: "Web3.js",
+    desc: "Blockchain Library",
+    img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/web3dotjs.svg",
+  },
+  {
+    name: "C++",
+    desc: "Programming Language",
+    img: "https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/cplusplus.svg",
+  },
 ];
 
 export default function PremiumTools() {
   return (
-    <section className="bg-neutral-950 text-white px-6 py-16 md:px-12 lg:px-24">
+    <section className="bg-neutral-950 text-white py-16 ">
       <div className="max-w-4xl mx-auto">
         {/* Heading */}
         <h2 className="text-5xl md:text-6xl font-extrabold">
@@ -79,17 +98,9 @@ export default function PremiumTools() {
         {/* Tools Grid */}
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-6">
           {tools.map((tool, index) => (
-            <div
-              key={index}
-              className="flex items-center gap-4 group"
-            >
+            <div key={index} className="flex items-center gap-4 group">
               <div className="bg-white w-12 h-12 flex items-center justify-center rounded-md shadow-md">
-                <Image
-                  src={tool.img}
-                  alt={tool.name}
-                  width={24}
-                  height={24}
-                />
+                <Image src={tool.img} alt={tool.name} width={24} height={24} />
               </div>
 
               <div className="transition-colors duration-300 group-hover:text-orange-500">

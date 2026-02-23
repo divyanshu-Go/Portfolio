@@ -10,6 +10,7 @@ import Navbar from "@/components/Navbar";
 import PremiumTools from "@/components/PremiumTools";
 import Profile from "@/components/Profile";
 import Projects from "@/components/Projects";
+import DSAProfiles from "@/components/DsaProfiles";
 
 export const dynamic = "force-static";
 
@@ -56,6 +57,12 @@ const PortfolioPage = () => {
           <div id="tools">
             <RevealOnScroll delay={0.3}>
               <PremiumTools />
+            </RevealOnScroll>
+          </div>
+
+          <div id="dsa">
+            <RevealOnScroll delay={0.15}>
+              <DSAProfiles />
             </RevealOnScroll>
           </div>
 

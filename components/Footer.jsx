@@ -22,7 +22,7 @@ export default function Footer() {
           <Link href="https://www.linkedin.com/in/divyanshu-sharma-go" className="hover:text-white transition">
             <Linkedin className="w-5 h-5" />
           </Link>
-          <Link href="mailto:divyanshu9304628@gmail.com" className="hover:text-white transition">
+          <Link href="mailto:divyanshu.work.930@gmail.com" className="hover:text-white transition">
             <Mail className="w-5 h-5" />
           </Link>
         </div>

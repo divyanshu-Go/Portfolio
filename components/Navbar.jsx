@@ -3,7 +3,7 @@
 "use client";
 
 import Link from "next/link";
-import { Home, Folder, Wrench, Edit3, School, University, Shapes, Contact } from "lucide-react";
+import { Home, Folder, Wrench, Edit3, School, Code, University, Shapes, Contact } from "lucide-react";
 import { animate } from "framer-motion";
 
 const navItems = [
@@ -11,6 +11,7 @@ const navItems = [
   { name: "Projects", icon: Folder, id: "projects" },
   { name: "Academics", icon: University  , id: "qualification" },
   { name: "Tools", icon: Wrench, id: "tools" },
+  { name: "DSA", icon: Code, id: "dsa" },
   { name: "Thoughts", icon: Shapes , id: "thoughts" },
   { name: "Contact", icon: Contact , id: "contact" },
 ];
@@ -28,7 +29,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="flex w-72 justify-center gap-7 bg-neutral-900 px-8 py-4 rounded-full shadow-lg">
+    <div className="flex w-fit justify-center gap-7 bg-neutral-900 px-8 py-4 rounded-full shadow-lg">
       {navItems.map((item) => (
         <button
           key={item.name}

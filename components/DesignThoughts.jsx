@@ -33,7 +33,7 @@ export default function DesignThoughts() {
   return (
     <section
       id="thoughts"
-      className="bg-neutral-950 text-white px-6 py-16 md:px-12 lg:px-24"
+      className="bg-neutral-950 text-white py-16 "
     >
       <div className="max-w-4xl mx-auto">
         {/* Heading */}

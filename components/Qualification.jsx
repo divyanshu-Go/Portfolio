@@ -31,7 +31,7 @@ export default function Qualification() {
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
-    <section className="bg-neutral-950 text-white px-6 py-16 md:px-12 lg:px-24" id="qualification">
+    <section className="bg-neutral-950 text-white py-16 " id="qualification">
       <div className="max-w-4xl mx-auto" ref={ref}>
         
         {/* Heading */}

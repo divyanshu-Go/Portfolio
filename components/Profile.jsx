@@ -37,7 +37,7 @@ export default function ProfileComponent() {
 
       {/* Title */}
       <p className="text-neutral-500 mt-1 text-sm leading-relaxed">
-        Full-stack Web Developer crafting innovative <br />
+        Full-stack & DApp Developer crafting innovative <br />
         solutions from concept to deployment.
       </p>
 

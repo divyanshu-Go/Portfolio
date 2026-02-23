@@ -2,18 +2,16 @@
 
 import Link from "next/link";
 import { ArrowRight, Layers, SquareStack } from "lucide-react";
-import AboutStatic from "./AboutStatic";
 import AboutTypewriter from "./AboutTypewriter";
 
 export default function About() {
   return (
-    <section className="bg-neutral-950 text-white px-6 py-16 md:px-12 lg:px-24">
+    <section className="bg-neutral-950 text-white py-16 ">
       <div className="max-w-4xl mx-auto">
 
         {/* Heading (instant render + enhancement) */}
         <div className="">
           {/* Static text for instant paint */}
-          {/* <AboutStatic /> */}
 
           {/* Typewriter overlays after hydration */}
           <span className="relative inset-0">
@@ -74,7 +72,7 @@ export default function About() {
           >
             <SquareStack className="w-6 h-6 mb-4" />
             <p className="font-bold uppercase text-sm leading-tight">
-              Framer, Figma, <br /> Wordpress, ReactJS
+              Framer, Figma, <br /> Vite, NextJs, ReactJS
             </p>
             <div className="mt-4 flex justify-end">
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
